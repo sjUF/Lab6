@@ -3,6 +3,16 @@ def encode(password):
   return ''.join([str((int(num) + 3) % 10) for num in password])
 
 
+# Isaiah Tanon (Decode addition)
+def decode(password):
+    x = password
+    final_list2 = []
+    for i in range(len(x)):
+      y = int(x[i])
+      final_list2 += [str(y - 3)]
+    original_password = ''.join(final_list2)
+    return original_password
+
 def main():
   while True:
     print('Menu\n-------------\n1. Encode\n2. Decode\n3. Quit')
